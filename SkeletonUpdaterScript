@@ -1,3 +1,8 @@
+Dynamic Skeleton Part Definitions: It automatically scans child objects and determines skeleton parts dynamically.
+Warning for Missing Settings: If the config is missing, it gives an error.
+More Modular and Readable: Each function does a clear task.
+Automatic Update: Automatically updates using OnValidate when you make changes in the Unity Editor.
+
 using System.Collections.Generic;
 using UnityEngine;
 

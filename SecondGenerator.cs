@@ -2,7 +2,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "CharacterConfig", menuName = "Configs/Character")]
-public class CharacterConfig : ScriptableObject
+public class CharacterConfig : ScriptableObject  //Configuration Paatern Desing :In this pattern, settings and configuration data are managed from external sources.
+
 {
     public Vector3 armSize;
     public Vector3 handSize;
@@ -16,8 +17,8 @@ public class SkeletonUpdater : MonoBehaviour
     [Header("Configuration")]
     public CharacterConfig config;
 
-    [Header("Skeleton Parts")]
-    private Dictionary<string, Transform> skeletonParts = new Dictionary<string, Transform>();
+    [Header("Skeleton Parts")] 
+    private Dictionary<string, Transform> skeletonParts = new Dictionary<string, Transform>();  //Dictionary Pattern
 
     private void Awake()
     {
@@ -43,7 +44,7 @@ public class SkeletonUpdater : MonoBehaviour
             Debug.LogError("Configuration is missing. Please assign a CharacterConfig.");
             return;
         }
-
+    // Single Responsibility Principle : Each transaction has a single responsibility: Single Responsibility Principle.
         UpdateLimbSize("LeftArm", config.armSize);
         UpdateLimbSize("RightArm", config.armSize);
         UpdateLimbSize("Spine", config.spineSize);
@@ -84,7 +85,7 @@ public class SkeletonUpdater : MonoBehaviour
     }
 
     #if UNITY_EDITOR
-    private void OnValidate()
+    private void OnValidate() //Observer Pattern : 
     {
         if (Application.isPlaying) return;
         UpdateSkeleton();

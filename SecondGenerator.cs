@@ -1,8 +1,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(fileName = "CharacterConfig", menuName = "Configs/Character")]
+public class CharacterConfig : ScriptableObject
+{
+    public Vector3 armSize;
+    public Vector3 handSize;
+    public Vector3 handPosition;
+    public Vector3 spineSize;
+    public float yPosition;
+}
 
-public class SecondGenerator: MonoBehaviour
+public class SkeletonUpdater : MonoBehaviour
 {
     [Header("Configuration")]
     public CharacterConfig config;

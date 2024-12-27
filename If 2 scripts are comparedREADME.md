@@ -1,7 +1,7 @@
 # CharacterGenerator 
 Modules and a professional approach for Character Generator in games
 
-Why the First Script (Your Current Script) Works for You
+Why the First Script (FirstGenerator) Works for You
 Simplicity:
 
 The CharacterGenerator script is straightforward, with clear and explicit variable assignments for each body part.

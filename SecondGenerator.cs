@@ -3,7 +3,6 @@ using UnityEngine;
 
 [CreateAssetMenu(fileName = "CharacterConfig", menuName = "Configs/Character")]
 public class CharacterConfig : ScriptableObject  //Configuration Paatern Desing :In this pattern, settings and configuration data are managed from external sources.
-
 {
     public Vector3 armSize;
     public Vector3 handSize;

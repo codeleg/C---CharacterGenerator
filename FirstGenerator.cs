@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FirstGenerator : MonoBehaviour
 
-{ //nasıl birbirne entegre edeceğimi bulamadım . şimdilik sadece değişkenlerin atanarak değil find ile bulunarak transform ettim sciprit buraya bırakıyorum  
+{ 
  // Kol boyutları
     [Header("Kol Boyutları")]
     [Range(0.5f, 3.0f)] public float armSizeX = 1.0f;
